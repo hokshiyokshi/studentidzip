@@ -1,5 +1,5 @@
 version: '3.8'  # Specify the version of the Docker Compose file format
-
+#Q2
 services:
   # Jenkins service configuration
   jenkins:
@@ -7,8 +7,8 @@ services:
       context: ./jenkins  # Path to the Jenkins Dockerfile directory
       dockerfile: Dockerfile  # Name of the Dockerfile for Jenkins
       args:
-        GIT_USER_NAME: "RYAN RAIDLEY YIAP CHANG FENG"  # Replace with your full name
-        GIT_USER_EMAIL: "2201953@sit.singaporetech.edu.sg"  # Replace with your email
+        GIT_USER_NAME: "RYAN RAIDLEY YIAP CHANG FENG"  # Replace with your full name Q3
+        GIT_USER_EMAIL: "2201953@sit.singaporetech.edu.sg"  # Replace with your email Q3
     ports:
       - "8080:8080"  # Map host port 8080 to container port 8080 for Jenkins web interface
       - "50000:50000"  # Map host port 50000 to container port 50000 for Jenkins agent communication
@@ -31,6 +31,7 @@ services:
       - SONARQUBE_JDBC_USERNAME=sonarqube  # Database username
       - SONARQUBE_JDBC_PASSWORD=sonarqube  # Database password
 
+  #Q2
  # Nginx service configuration
   nginx:
     image: nginx:latest  # Use the latest version of Nginx
