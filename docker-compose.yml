@@ -31,7 +31,13 @@ services:
       - SONARQUBE_JDBC_USERNAME=sonarqube  # Database username
       - SONARQUBE_JDBC_PASSWORD=sonarqube  # Database password
 
-
+ # Nginx service configuration
+  nginx:
+    image: nginx:latest  # Use the latest version of Nginx
+    ports:
+      - "80:80"  # Map host port 80 to container port 80 for Nginx
+    volumes:
+      - ./nginx:/etc/nginx/conf.d  # Mount the Nginx configuration directory
 
 
   # PostgreSQL database service configuration
