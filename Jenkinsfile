@@ -20,7 +20,7 @@ pipeline {
         stage('Clone Repository') {
             steps {
                 dir('workspace') {
-                    git branch: 'main', url: 'https://github.com/hokshiyokshi/studentidzip1.git'
+                    git branch: 'main', url: 'https://github.com/hokshiyokshi/studentidzip.git'
                 }
             }
         }
